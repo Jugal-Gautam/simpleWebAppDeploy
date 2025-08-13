@@ -7,13 +7,11 @@ phases:
   build:
     commands:
       - echo "Starting build process..."
-      - mkdir -p deploy
-      # Copy everything except deploy directory
-      - shopt -s extglob
-      - cp -r !(deploy) deploy/
-      - rm -rf deploy/.git
-      - ls -R deploy
+      - mkdir -p build_output
+      - cp -r ./* build_output/
+      - rm -rf build_output/.git
+      - ls -R build_output
 artifacts:
   files:
     - '**/*'
-  base-directory: deploy
+  base-directory: build_output
