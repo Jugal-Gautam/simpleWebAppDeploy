@@ -3,15 +3,11 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo "Installing dependencies (if any)..."
+      - echo Installing
   build:
     commands:
-      - echo "Starting build process..."
-      - mkdir -p build_output
-      - cp -r ./* build_output/
-      - rm -rf build_output/.git
-      - ls -R build_output
+      - echo Build completed
+
 artifacts:
   files:
     - '**/*'
-  base-directory: build_output
