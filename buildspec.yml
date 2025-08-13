@@ -3,11 +3,16 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Installing
+      - echo "Installing dependencies (if any)..."
   build:
     commands:
-      - echo Build completed
-
+      - echo "Starting build process..."
+      - mkdir -p deploy
+      # Copy your application files from the source folder into deploy/
+      - cp -r artifacts/* deploy/
+      # Optional: remove .git and other unnecessary files
+      - rm -rf deploy/.git
 artifacts:
   files:
     - '**/*'
+  base-directory: deploy
