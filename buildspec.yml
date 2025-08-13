@@ -8,8 +8,9 @@ phases:
     commands:
       - echo "Starting build process..."
       - mkdir -p deploy
-      # Copy everything from the source root into deploy/
-      - cp -r ./* deploy/
+      # Copy everything except deploy directory
+      - shopt -s extglob
+      - cp -r !(deploy) deploy/
       - rm -rf deploy/.git
       - ls -R deploy
 artifacts:
