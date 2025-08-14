@@ -1,11 +1,141 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My Web App</title>
-  </head>
-  <body>
-    <h1>Deployed via AWS CodePipeline New Commit</h1>
-    <h1>Sahi mai kaam kr rha hai</h1>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Web App</title>
+  <style>
+	  body {
+		font-family: Arial, sans-serif;
+		margin: 0;
+		padding: 0;
+		background: linear-gradient(to bottom, #f0f4f8, #d9e4ec);
+		min-height: 100vh; /* Full screen height */
+		display: flex;
+		flex-direction: column;
+	  }
+
+	  /* Cover photo */
+	  .cover {
+		width: 100%;
+		height: 250px;
+		background-image: url('images/coverPhotoSimpleWebApp.jpeg'); /* Replace with your cover image */
+		background-size: cover;
+		background-position: center;
+		flex-shrink: 0;
+	  }
+
+	  /* Profile + Bio section */
+	  .profile-section {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 30px;
+		background-color: white;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+		margin-top: -80px; /* Overlaps on cover photo */
+		border-radius: 12px;
+		width: 80%;
+		max-width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+	  }
+
+	  .profile-pic {
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		border: 5px solid white;
+		background-image: url('images/profilePhotoSimpleWebApp.jpg'); /* Replace with your profile image */
+		background-size: cover;
+		background-position: center;
+		margin-right: 30px;
+	  }
+
+	  .bio {
+		flex: 1;
+	  }
+
+	  .bio h1 {
+		margin: 0;
+		font-size: 2em;
+	  }
+
+	  .bio p {
+		margin-top: 5px;
+		color: #555;
+		font-size: 1.1em;
+		line-height: 1.5;
+	  }
+
+	  /* Social Links */
+	  .social-links {
+		margin-top: 15px;
+	  }
+
+	  .social-links a {
+		display: inline-block;
+		margin-right: 12px;
+	  }
+
+	  .social-links img {
+		width: 35px;
+		height: 35px;
+		border-radius: 50%;
+		transition: transform 0.2s;
+	  }
+
+	  .social-links img:hover {
+		transform: scale(1.1);
+	  }
+
+	  /* Push footer to bottom */
+	  .content {
+		flex: 1;
+	  }
+
+	  @media screen and (max-width: 768px) {
+		.profile-section {
+		  flex-direction: column;
+		  text-align: center;
+		}
+		.profile-pic {
+		  margin-bottom: 15px;
+		}
+	  }
+  </style>
+
+</head>
+<body>
+
+  <!-- Cover Photo -->
+  <div class="cover"></div>
+
+  <!-- Profile + Bio -->
+  <div class="profile-section">
+    <div class="profile-pic"></div>
+    <div class="bio">
+      <h1>Jugal Gautam</h1>
+      <p>🚀 Tech Enthusiast | 🐍 Python Developer | 🌏 Traveler <br>
+         Fun fact: I can deploy this website faster than I can make tea ☕</p>
+
+      <!-- Social Links -->
+      <div class="social-links">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/jugalgautamdevops/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </a>
+        <!-- GitHub -->
+        <a href="https://github.com/Jugal-Gautam/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+        </a>
+        <!-- Instagram -->
+        <a href="https://instagram.com/i_jugal_gautam/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
+      </div>
+    </div>
+  </div>
+
+</body>
 </html>
